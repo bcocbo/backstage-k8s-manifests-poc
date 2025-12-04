@@ -1,19 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: backstage
+  name: backstagepoc1
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
-    repoURL: https://github.com/bcocbo/backstage-k8s-manifests
+    repoURL: https://github.com/bcocbo/backstage-k8s-manifests-poc
     targetRevision: HEAD
     path: manifests/overlays/production    
   destination:
     server: https://kubernetes.default.svc
-    namespace: backstage
+    namespace: backstagepoc1
   syncPolicy:
     automated:
       prune: true

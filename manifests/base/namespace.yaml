@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: backstage
+  name: backstagepoc
   labels:
     name: backstage
     argocd.argoproj.io/managed-by: argocd

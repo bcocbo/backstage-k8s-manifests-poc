@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: postgres-secrets
-  namespace: backstage
+  namespace: backstagepoc
 type: Opaque
 data:
   POSTGRES_USER: YmFja3N0YWdl
@@ -13,7 +13,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: postgres-pvc
-  namespace: backstage
+  namespace: backstagepoc
 spec:
   accessModes:
     - ReadWriteOnce
@@ -27,7 +27,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: postgres
-  namespace: backstage
+  namespace: backstagepoc
   labels:
     app: postgres
 spec:
@@ -91,7 +91,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: postgres
-  namespace: backstage
+  namespace: backstagepoc
 spec:
   selector:
     app: postgres

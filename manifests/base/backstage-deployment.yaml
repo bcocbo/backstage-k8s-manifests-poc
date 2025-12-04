@@ -20,7 +20,7 @@ spec:
       serviceAccountName: backstagepoc
       containers:
       - name: backstage
-        image: 226633502530.dkr.ecr.us-east-1.amazonaws.com/backstage:main-2848858
+        image: 226633502530.dkr.ecr.us-east-1.amazonaws.com/plataforma:main-72325de
         ports:
         - name: http
           containerPort: 7007

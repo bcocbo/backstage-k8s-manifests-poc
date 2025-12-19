@@ -25,6 +25,11 @@ spec:
         - name: http
           containerPort: 7007
         env:
+        - name: GITHUB_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: backstage-secrets
+              key: GITHUB_TOKEN
         - name: NODE_ENV
           value: production
         - name: POSTGRES_HOST
